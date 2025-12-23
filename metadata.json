@@ -1,0 +1,8 @@
+{
+  "name": "Beacon - Anti-Violence Support",
+  "description": "A safe, privacy-focused application providing immediate assistance, legal resources, and AI-powered safety planning for victims of domestic violence.",
+  "requestFramePermissions": [
+    "geolocation",
+    "microphone"
+  ]
+}
