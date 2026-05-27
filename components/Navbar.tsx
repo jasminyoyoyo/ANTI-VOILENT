@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ShieldCheck, HeartHandshake, MapPin, BookOpen, EyeOff } from 'lucide-react';
+import { ShieldCheck, HeartHandshake, MapPin, BookOpen, EyeOff, Activity, ScanSearch } from 'lucide-react';
 
 interface NavbarProps {
   onEnableDisguise: () => void;
@@ -29,9 +29,17 @@ const Navbar: React.FC<NavbarProps> = ({ onEnableDisguise }) => {
               <MapPin size={18} />
               <span className="hidden sm:inline">Resources</span>
             </Link>
+             <Link to="/risk-check" className="flex items-center gap-1 px-3 py-2 rounded-md text-sm font-medium text-slate-600 hover:text-violet-600 hover:bg-violet-50">
+              <ScanSearch size={18} />
+              <span className="hidden sm:inline">Risk Check</span>
+            </Link>
              <Link to="/safety-plan" className="flex items-center gap-1 px-3 py-2 rounded-md text-sm font-medium text-slate-600 hover:text-violet-600 hover:bg-violet-50">
               <BookOpen size={18} />
               <span className="hidden sm:inline">Safety Plan</span>
+            </Link>
+            <Link to="/ai-test" className="flex items-center gap-1 px-3 py-2 rounded-md text-sm font-medium text-slate-600 hover:text-violet-600 hover:bg-violet-50">
+              <Activity size={18} />
+              <span className="hidden sm:inline">AI Test</span>
             </Link>
             <Link to="/chat" className="flex items-center gap-1 px-3 py-2 rounded-md text-sm font-medium text-white bg-violet-600 hover:bg-violet-700 shadow-sm transition-colors">
               <HeartHandshake size={18} />

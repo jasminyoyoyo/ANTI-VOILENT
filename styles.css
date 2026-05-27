@@ -1,0 +1,46 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --color-beacon-50: #eef6ff;
+  --color-beacon-100: #d8eaff;
+  --color-beacon-500: #4b82ff;
+  --color-beacon-600: #325fe0;
+  --color-beacon-900: #10244d;
+}
+
+:root {
+  color: #0f172a;
+  background:
+    radial-gradient(circle at top, rgba(141, 190, 255, 0.22), transparent 36%),
+    linear-gradient(180deg, #f8fbff 0%, #f8fafc 100%);
+  font-family: "SF Pro Display", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.leaflet-container {
+  z-index: 1 !important;
+}
+
+.glass-panel {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0.08));
+  backdrop-filter: blur(18px);
+}
