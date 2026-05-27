@@ -1,107 +1,265 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import { Phone, MessageCircle, Map, Shield, EyeOff, Info, X } from 'lucide-react';
+import {
+  ArrowRight,
+  BookOpenCheck,
+  EyeOff,
+  FileSearch,
+  LockKeyhole,
+  Map,
+  MessageCircle,
+  Phone,
+  Shield,
+  Siren,
+  Sparkles,
+} from 'lucide-react';
 
 const Home: React.FC = () => {
-  const [showSecurityGuide, setShowSecurityGuide] = useState(false);
-
   return (
     <div className="flex flex-col min-h-screen">
-      {/* Hero Section */}
-      <section className="bg-violet-50 py-12 sm:py-20 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl sm:text-5xl font-extrabold text-slate-900 mb-6">
-            You deserve to be <span className="text-violet-600">safe</span>.
-          </h1>
-          <p className="text-lg sm:text-xl text-slate-600 mb-8 max-w-2xl mx-auto">
-            If you are experiencing violence at home, you are not alone. Beacon provides immediate resources, legal guidance, and safety planning powered by AI assistance.
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
-             <Link to="/chat" className="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-violet-600 hover:bg-violet-700 md:text-lg shadow-sm transition-all">
-              <MessageCircle className="mr-2" />
-              Chat with Advocate AI
-            </Link>
-             <Link to="/resources" className="inline-flex items-center justify-center px-8 py-3 border border-violet-200 text-base font-medium rounded-md text-violet-700 bg-white hover:bg-violet-50 md:text-lg shadow-sm transition-all">
-              <Map className="mr-2" />
-              Find Legal Help
-            </Link>
-          </div>
+      <section className="relative overflow-hidden px-4 pt-10 pb-16 sm:pt-16 sm:pb-20">
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute -top-24 left-1/2 h-72 w-72 -translate-x-1/2 rounded-full bg-violet-200/55 blur-3xl"></div>
+          <div className="absolute right-[-5rem] top-24 h-64 w-64 rounded-full bg-sky-200/40 blur-3xl"></div>
         </div>
-      </section>
 
-      {/* Immediate Help Banner */}
-      <section className="bg-rose-100 border-y border-rose-200 py-6 px-4">
-        <div className="max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+        <div className="relative max-w-6xl mx-auto">
+          <div className="grid gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
             <div>
-                <h3 className="text-lg font-bold text-rose-800 flex items-center justify-center sm:justify-start gap-2">
-                    <Phone size={20} />
-                    In Immediate Danger?
-                </h3>
-                <p className="text-rose-700 text-sm mt-1">
-                    If you are injured or afraid for your life, call emergency services immediately.
-                </p>
-            </div>
-            <a href="tel:110" className="bg-rose-600 hover:bg-rose-700 text-white font-bold py-2 px-6 rounded-full shadow-md transition-colors">
-                Call Emergency
-            </a>
-        </div>
-      </section>
+              <div className="inline-flex items-center gap-2 rounded-full border border-violet-200 bg-white/85 px-3 py-1.5 text-sm font-medium text-violet-700 shadow-sm">
+                <LockKeyhole size={15} />
+                Private, trauma-informed support
+              </div>
 
-      {/* Features Grid */}
-      <section className="py-16 px-4 max-w-6xl mx-auto">
-        <h2 className="text-3xl font-bold text-center text-slate-800 mb-12">How We Can Help</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white p-6 rounded-xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
-                <div className="w-12 h-12 bg-violet-100 rounded-lg flex items-center justify-center text-violet-600 mb-4">
-                    <Shield size={24} />
+              <h1 className="mt-6 max-w-3xl text-4xl font-black tracking-tight text-slate-950 sm:text-5xl lg:text-6xl">
+                A safer first step when
+                <span className="block bg-gradient-to-r from-violet-600 via-fuchsia-500 to-sky-500 bg-clip-text text-transparent">
+                  home does not feel safe.
+                </span>
+              </h1>
+
+              <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600">
+                Beacon helps people affected by domestic and family violence find private guidance, practical safety planning,
+                and trusted support options in Australia without overwhelming them at the worst moment.
+              </p>
+
+              <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+                <Link
+                  to="/chat"
+                  className="inline-flex items-center justify-center gap-2 rounded-2xl bg-violet-600 px-6 py-3.5 text-base font-semibold text-white shadow-[0_15px_40px_rgba(124,58,237,0.28)] transition hover:bg-violet-700"
+                >
+                  <MessageCircle size={18} />
+                  Talk safely now
+                </Link>
+                <Link
+                  to="/resources"
+                  className="inline-flex items-center justify-center gap-2 rounded-2xl border border-slate-200 bg-white px-6 py-3.5 text-base font-semibold text-slate-800 shadow-sm transition hover:border-violet-200 hover:bg-violet-50"
+                >
+                  <Map size={18} />
+                  Find trusted support
+                </Link>
+              </div>
+
+              <div className="mt-8 flex flex-wrap gap-3 text-sm text-slate-600">
+                <span className="rounded-full border border-slate-200 bg-white/80 px-3 py-1.5">Fast exit</span>
+                <span className="rounded-full border border-slate-200 bg-white/80 px-3 py-1.5">Disguise mode</span>
+                <span className="rounded-full border border-slate-200 bg-white/80 px-3 py-1.5">Safety planning</span>
+                <span className="rounded-full border border-slate-200 bg-white/80 px-3 py-1.5">Australia-focused support</span>
+              </div>
+            </div>
+
+            <div className="rounded-[2rem] border border-white/70 bg-white/78 p-6 shadow-[0_25px_80px_rgba(15,23,42,0.10)] backdrop-blur-xl">
+              <div className="flex items-center justify-between">
+                <div>
+                  <p className="text-xs uppercase tracking-[0.24em] text-slate-500">Start Here</p>
+                  <h2 className="mt-2 text-2xl font-bold text-slate-900">What do you need right now?</h2>
                 </div>
-                <h3 className="text-xl font-bold text-slate-800 mb-2">Safety Planning</h3>
-                <p className="text-slate-600 mb-4">Create a personalized, step-by-step plan to keep yourself and your children safe, whether you stay or leave.</p>
-                <Link to="/safety-plan" className="text-violet-600 font-medium hover:underline">Start planning &rarr;</Link>
-            </div>
+                <Sparkles className="text-violet-500" size={22} />
+              </div>
 
-            <div className="bg-white p-6 rounded-xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
-                <div className="w-12 h-12 bg-violet-100 rounded-lg flex items-center justify-center text-violet-600 mb-4">
-                    <Map size={24} />
-                </div>
-                <h3 className="text-xl font-bold text-slate-800 mb-2">Government Aid</h3>
-                <p className="text-slate-600 mb-4">Locate official shelters, Women's Federation offices, and police stations using verified maps.</p>
-                <Link to="/resources" className="text-violet-600 font-medium hover:underline">Search map &rarr;</Link>
-            </div>
+              <div className="mt-6 space-y-4">
+                <Link
+                  to="/resources"
+                  className="group block rounded-2xl border border-rose-200 bg-rose-50 p-5 transition hover:border-rose-300 hover:bg-rose-100/70"
+                >
+                  <div className="flex items-start gap-4">
+                    <div className="rounded-xl bg-rose-500 p-2.5 text-white shadow-sm">
+                      <Siren size={18} />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="font-semibold text-slate-900">I need help now</h3>
+                      <p className="mt-1 text-sm leading-6 text-slate-600">
+                        Go straight to emergency contacts, national services, police support, and fast local help options.
+                      </p>
+                    </div>
+                    <ArrowRight className="mt-1 text-rose-500 transition group-hover:translate-x-1" size={18} />
+                  </div>
+                </Link>
 
-            <div className="bg-white p-6 rounded-xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
-                <div className="w-12 h-12 bg-violet-100 rounded-lg flex items-center justify-center text-violet-600 mb-4">
-                    <MessageCircle size={24} />
-                </div>
-                <h3 className="text-xl font-bold text-slate-800 mb-2">24/7 AI Support</h3>
-                <p className="text-slate-600 mb-4">Talk to our empathetic AI advocate to understand your rights and get emotional support anytime.</p>
-                <Link to="/chat" className="text-violet-600 font-medium hover:underline">Start chat &rarr;</Link>
-            </div>
-        </div>
-      </section>
+                <Link
+                  to="/chat"
+                  className="group block rounded-2xl border border-violet-200 bg-violet-50 p-5 transition hover:border-violet-300 hover:bg-violet-100/70"
+                >
+                  <div className="flex items-start gap-4">
+                    <div className="rounded-xl bg-violet-500 p-2.5 text-white shadow-sm">
+                      <MessageCircle size={18} />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="font-semibold text-slate-900">I need a calm first step</h3>
+                      <p className="mt-1 text-sm leading-6 text-slate-600">
+                        Use the private support chat if you need help thinking through what to do next.
+                      </p>
+                      <p className="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-violet-700">
+                        Not sure if this is abuse? The risk check can help.
+                        <ArrowRight size={15} />
+                      </p>
+                    </div>
+                    <ArrowRight className="mt-1 text-violet-500 transition group-hover:translate-x-1" size={18} />
+                  </div>
+                </Link>
 
-      {/* Disguise Mode Instructions */}
-      <section className="bg-slate-800 text-slate-300 py-12 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="inline-flex items-center justify-center w-12 h-12 bg-slate-700 rounded-full mb-4 text-slate-100">
-            <EyeOff size={24} />
+                <Link
+                  to="/safety-plan"
+                  className="group block rounded-2xl border border-sky-200 bg-sky-50 p-5 transition hover:border-sky-300 hover:bg-sky-100/70"
+                >
+                  <div className="flex items-start gap-4">
+                    <div className="rounded-xl bg-sky-500 p-2.5 text-white shadow-sm">
+                      <Shield size={18} />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="font-semibold text-slate-900">I want to make a safe plan</h3>
+                      <p className="mt-1 text-sm leading-6 text-slate-600">
+                        Build a practical plan for leaving, staying safer tonight, children, transport, and digital safety.
+                      </p>
+                    </div>
+                    <ArrowRight className="mt-1 text-sky-500 transition group-hover:translate-x-1" size={18} />
+                  </div>
+                </Link>
+              </div>
+            </div>
           </div>
-          <h2 className="text-2xl font-bold text-white mb-4">Disguise Mode Safety Guide</h2>
-          <p className="mb-6 max-w-2xl mx-auto">
-            You can switch this app into "Weather App" mode instantly. Here is how to control it once disguised:
-          </p>
-          
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 text-left max-w-2xl mx-auto">
-            <div className="bg-slate-700/50 p-4 rounded-lg border border-slate-600">
-              <h3 className="font-bold text-white mb-2">To Exit Disguise:</h3>
-              <p>Tap the <span className="font-bold text-sky-300">Refresh Icon</span> (top right) <span className="font-bold text-white bg-slate-600 px-1 rounded">3 times</span> quickly.</p>
+        </div>
+      </section>
+
+      <section className="border-y border-rose-200 bg-rose-50/90 px-4 py-5">
+        <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 sm:flex-row">
+          <div className="text-center sm:text-left">
+            <h3 className="flex items-center justify-center gap-2 text-lg font-bold text-rose-800 sm:justify-start">
+              <Phone size={19} />
+              In immediate danger?
+            </h3>
+            <p className="mt-1 text-sm text-rose-700">
+              If you are injured, threatened, or afraid for your life, call emergency services immediately.
+            </p>
+          </div>
+          <a
+            href="tel:000"
+            className="inline-flex items-center justify-center rounded-full bg-rose-600 px-6 py-2.5 text-sm font-bold text-white shadow-md transition hover:bg-rose-700"
+          >
+            Call 000
+          </a>
+        </div>
+      </section>
+
+      <section className="px-4 py-16">
+        <div className="mx-auto max-w-6xl">
+          <div className="mb-10 text-center">
+            <p className="text-xs font-semibold uppercase tracking-[0.28em] text-violet-600">Three Core Paths</p>
+            <h2 className="mt-3 text-3xl font-bold text-slate-900">Designed to reduce confusion at a hard moment</h2>
+            <p className="mt-3 mx-auto max-w-2xl text-slate-600">
+              Instead of making you search through lots of features, Beacon tries to get you to the right next step quickly.
+            </p>
+          </div>
+
+          <div className="grid gap-6 md:grid-cols-3">
+            <div className="rounded-[1.75rem] border border-slate-200 bg-white p-6 shadow-sm">
+              <div className="mb-4 inline-flex rounded-2xl bg-violet-100 p-3 text-violet-600">
+                <Map size={22} />
+              </div>
+              <h3 className="text-xl font-bold text-slate-900">Trusted support access</h3>
+              <p className="mt-3 text-sm leading-6 text-slate-600">
+                Find relevant support services and reduce the friction between needing help and contacting the right place.
+              </p>
             </div>
-            <div className="bg-slate-700/50 p-4 rounded-lg border border-slate-600">
-               <h3 className="font-bold text-white mb-2 flex items-center gap-2">
-                 To Trigger SOS:
-                 <span className="bg-red-600 text-white text-xs px-2 py-0.5 rounded-full">Emergency</span>
-               </h3>
-              <p>Tap the large <span className="font-bold text-sky-300">Weather Icon</span> (center) <span className="font-bold text-white bg-slate-600 px-1 rounded">5 times</span>. This will immediately open the Voice Call screen.</p>
+
+            <div className="rounded-[1.75rem] border border-slate-200 bg-white p-6 shadow-sm">
+              <div className="mb-4 inline-flex rounded-2xl bg-violet-100 p-3 text-violet-600">
+                <BookOpenCheck size={22} />
+              </div>
+              <h3 className="text-xl font-bold text-slate-900">Actionable safety planning</h3>
+              <p className="mt-3 text-sm leading-6 text-slate-600">
+                Turn fear and uncertainty into a practical plan covering transport, emergency items, trusted contacts, and digital safety.
+              </p>
+            </div>
+
+            <div className="rounded-[1.75rem] border border-slate-200 bg-white p-6 shadow-sm">
+              <div className="mb-4 inline-flex rounded-2xl bg-violet-100 p-3 text-violet-600">
+                <MessageCircle size={22} />
+              </div>
+              <h3 className="text-xl font-bold text-slate-900">Private guided support</h3>
+              <p className="mt-3 text-sm leading-6 text-slate-600">
+                Use a calm, low-pressure chat space when you are not ready to call, disclose everything, or decide immediately.
+              </p>
+            </div>
+
+            <div className="rounded-[1.75rem] border border-slate-200 bg-white p-6 shadow-sm md:col-span-3">
+              <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+                <div>
+                  <div className="mb-4 inline-flex rounded-2xl bg-violet-100 p-3 text-violet-600">
+                    <FileSearch size={22} />
+                  </div>
+                  <h3 className="text-xl font-bold text-slate-900">Need help naming what is happening?</h3>
+                  <p className="mt-3 max-w-2xl text-sm leading-6 text-slate-600">
+                    Take a gentle risk check if you are unsure whether a relationship feels controlling, intimidating, or unsafe.
+                  </p>
+                </div>
+                <Link
+                  to="/risk-check"
+                  className="inline-flex items-center justify-center gap-2 rounded-2xl border border-slate-200 bg-white px-5 py-3 text-sm font-semibold text-slate-800 transition hover:border-violet-200 hover:bg-violet-50"
+                >
+                  Start risk check
+                  <ArrowRight size={16} />
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="px-4 pb-16">
+        <div className="mx-auto max-w-6xl rounded-[2rem] border border-slate-200 bg-slate-950 px-6 py-10 text-slate-200 shadow-[0_25px_70px_rgba(2,6,23,0.18)]">
+          <div className="max-w-3xl">
+            <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-sm font-medium text-slate-100">
+              <EyeOff size={15} />
+              Discreet mode
+            </div>
+            <h2 className="mt-4 text-3xl font-bold text-white">Designed for privacy under pressure</h2>
+            <p className="mt-4 text-sm leading-7 text-slate-300">
+              Beacon can switch into a weather screen quickly so the interface looks ordinary if someone walks in. The goal is not
+              to be clever. The goal is to give the user a safer exit.
+            </p>
+          </div>
+
+          <div className="mt-8 grid gap-4 md:grid-cols-2">
+            <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
+              <h3 className="font-semibold text-white">To exit disguise</h3>
+              <p className="mt-2 text-sm leading-6 text-slate-300">
+                Tap the <span className="font-semibold text-sky-300">menu icon</span> in the top right
+                <span className="mx-1 rounded bg-white/10 px-1.5 py-0.5 font-semibold text-white">3 times</span> quickly.
+              </p>
+            </div>
+
+            <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
+              <h3 className="flex items-center gap-2 font-semibold text-white">
+                SOS trigger
+                <span className="rounded-full bg-rose-500 px-2 py-0.5 text-[10px] font-bold uppercase tracking-[0.2em] text-white">
+                  Emergency
+                </span>
+              </h3>
+              <p className="mt-2 text-sm leading-6 text-slate-300">
+                Tap the <span className="font-semibold text-sky-300">large temperature display</span>
+                <span className="mx-1 rounded bg-white/10 px-1.5 py-0.5 font-semibold text-white">5 times</span> to jump straight to the voice help screen.
+              </p>
             </div>
           </div>
         </div>

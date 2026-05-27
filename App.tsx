@@ -1,30 +1,50 @@
-import React, { useState } from 'react';
+import React, { Suspense, lazy, useState } from 'react';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import QuickExit from './components/QuickExit';
-import WeatherDisguise from './components/WeatherDisguise';
-import Home from './pages/Home';
-import ChatPage from './pages/ChatPage';
-import ResourcesPage from './pages/ResourcesPage';
-import SafetyPlanPage from './pages/SafetyPlanPage';
+
+const WeatherDisguise = lazy(() => import('./components/WeatherDisguise'));
+const Home = lazy(() => import('./pages/Home'));
+const ChatPage = lazy(() => import('./pages/ChatPage'));
+const ResourcesPage = lazy(() => import('./pages/ResourcesPage'));
+const SafetyPlanPage = lazy(() => import('./pages/SafetyPlanPage'));
+const AiTestPage = lazy(() => import('./pages/AiTestPage'));
+const RiskCheckPage = lazy(() => import('./pages/RiskCheckPage'));
+
+const PageFallback: React.FC = () => (
+  <div className="min-h-[60vh] flex items-center justify-center px-4">
+    <div className="text-center">
+      <div className="w-10 h-10 mx-auto mb-4 border-4 border-violet-200 border-t-violet-600 rounded-full animate-spin"></div>
+      <p className="text-sm text-slate-500">Loading Beacon...</p>
+    </div>
+  </div>
+);
 
 const AppContent: React.FC = () => {
   const [isDisguised, setIsDisguised] = useState(false);
 
   if (isDisguised) {
-    return <WeatherDisguise onExitDisguise={() => setIsDisguised(false)} />;
+    return (
+      <Suspense fallback={<PageFallback />}>
+        <WeatherDisguise onExitDisguise={() => setIsDisguised(false)} />
+      </Suspense>
+    );
   }
 
   return (
     <div className="min-h-screen bg-slate-50 font-sans text-slate-900 selection:bg-violet-200 selection:text-violet-900">
       <Navbar onEnableDisguise={() => setIsDisguised(true)} />
       <main>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/chat" element={<ChatPage />} />
-          <Route path="/resources" element={<ResourcesPage />} />
-          <Route path="/safety-plan" element={<SafetyPlanPage />} />
-        </Routes>
+        <Suspense fallback={<PageFallback />}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/chat" element={<ChatPage />} />
+            <Route path="/resources" element={<ResourcesPage />} />
+            <Route path="/risk-check" element={<RiskCheckPage />} />
+            <Route path="/safety-plan" element={<SafetyPlanPage />} />
+            <Route path="/ai-test" element={<AiTestPage />} />
+          </Routes>
+        </Suspense>
       </main>
       <QuickExit />
       

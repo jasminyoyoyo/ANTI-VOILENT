@@ -19,8 +19,8 @@ const ResourceMap: React.FC<ResourceMapProps> = ({ userLocation, resources }) =>
 
     // Initialize map if not exists
     if (!leafletMap.current) {
-      const initialLat = userLocation?.latitude || 39.9042; // Beijing default if no loc
-      const initialLng = userLocation?.longitude || 116.4074;
+      const initialLat = userLocation?.latitude || -33.8688;
+      const initialLng = userLocation?.longitude || 151.2093;
       
       // Use L from the local reference
       leafletMap.current = L.map(mapRef.current).setView([initialLat, initialLng], 13);
@@ -63,7 +63,7 @@ const ResourceMap: React.FC<ResourceMapProps> = ({ userLocation, resources }) =>
             .bindPopup(`
               <div class="p-1">
                 <h4 class="font-bold text-sm">${res.title}</h4>
-                <a href="${res.uri}" target="_blank" class="text-xs text-blue-600 underline">Open in Maps</a>
+                <a href="${res.uri}" target="_blank" class="text-xs text-blue-600 underline">Open resource</a>
               </div>
             `);
         }
