@@ -22,7 +22,7 @@ const AiTestPage: React.FC = () => {
   return (
     <div className="max-w-3xl mx-auto px-4 py-8 pb-20">
       <div className="mb-8">
-        <div className="inline-flex items-center gap-2 rounded-full bg-violet-100 text-violet-700 px-3 py-1 text-sm font-medium">
+        <div className="inline-flex items-center gap-2 rounded-full bg-beacon-100 text-beacon-600 px-3 py-1 text-sm font-medium">
           <Settings2 size={16} />
           AI Diagnostics
         </div>
@@ -47,7 +47,7 @@ const AiTestPage: React.FC = () => {
         <button
           onClick={handleTest}
           disabled={loading}
-          className="inline-flex items-center gap-2 rounded-xl bg-violet-600 px-5 py-3 text-white font-medium hover:bg-violet-700 disabled:bg-slate-300 transition-colors"
+          className="inline-flex items-center gap-2 rounded-xl bg-beacon-500 px-5 py-3 text-white font-medium hover:bg-beacon-600 disabled:bg-slate-300 transition-colors"
         >
           {loading ? <RefreshCw size={18} className="animate-spin" /> : <Activity size={18} />}
           {loading ? 'Testing...' : 'Run Connection Test'}

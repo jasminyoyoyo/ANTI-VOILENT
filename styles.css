@@ -2,19 +2,17 @@
 @plugin "@tailwindcss/typography";
 
 @theme {
-  --color-beacon-50: #eef6ff;
-  --color-beacon-100: #d8eaff;
-  --color-beacon-500: #4b82ff;
-  --color-beacon-600: #325fe0;
-  --color-beacon-900: #10244d;
+  --color-beacon-50: #f4f5f7;
+  --color-beacon-100: #dfe3ea;
+  --color-beacon-500: #5f6f86;
+  --color-beacon-600: #48576d;
+  --color-beacon-900: #242424;
 }
 
 :root {
-  color: #0f172a;
-  background:
-    radial-gradient(circle at top, rgba(141, 190, 255, 0.22), transparent 36%),
-    linear-gradient(180deg, #f8fbff 0%, #f8fafc 100%);
-  font-family: "SF Pro Display", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  color: #242424;
+  background: #f5f4ef;
+  font-family: "Hiragino Sans", "Yu Gothic", "SF Pro Display", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
 }
 
 html,
@@ -25,6 +23,7 @@ body,
 
 body {
   margin: 0;
+  background: #f5f4ef;
 }
 
 .scrollbar-hide::-webkit-scrollbar {
@@ -43,4 +42,108 @@ body {
 .glass-panel {
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0.08));
   backdrop-filter: blur(18px);
+}
+
+.storybook-shell {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: #f5f4ef;
+}
+
+.storybook-shell::before {
+  pointer-events: none;
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  opacity: 0.16;
+  background:
+    radial-gradient(circle at 8% 18%, rgba(95, 111, 134, 0.35), transparent 19rem),
+    radial-gradient(circle at 92% 78%, rgba(154, 90, 69, 0.22), transparent 18rem);
+}
+
+.storybook-shell::after {
+  display: none;
+}
+
+.paper-card,
+.storybook-shell [class*="bg-white"] {
+  border-color: #d9d9cf;
+}
+
+.storybook-shell [class*="shadow-"],
+.storybook-shell [class*="shadow_"] {
+  box-shadow: 0 10px 26px rgba(36, 36, 36, 0.055);
+}
+
+.storybook-shell [class*="rounded-[2rem]"],
+.storybook-shell [class*="rounded-[1.75rem]"],
+.storybook-shell [class*="rounded-[1.6rem]"],
+.storybook-shell [class*="rounded-[1.55rem]"],
+.storybook-shell [class*="rounded-[1.5rem]"],
+.storybook-shell [class*="rounded-[1.25rem]"] {
+  border-radius: 1rem;
+}
+
+.storybook-shell [class*="bg-slate-950"],
+.storybook-shell [class*="bg-gray-900"] {
+  background-color: #242424;
+}
+
+.storybook-shell [class*="bg-slate-50"] {
+  background-color: #f3f3ec;
+}
+
+.storybook-shell [class*="text-slate-950"],
+.storybook-shell [class*="text-slate-900"] {
+  color: #242424;
+}
+
+.storybook-shell [class*="text-slate-600"],
+.storybook-shell [class*="text-slate-700"] {
+  color: #66635d;
+}
+
+.storybook-shell [class*="bg-emerald"],
+.storybook-shell [class*="bg-green"],
+.storybook-shell [class*="bg-teal"] {
+  background-color: #eef1f5;
+}
+
+.storybook-shell [class*="text-emerald"],
+.storybook-shell [class*="text-green"],
+.storybook-shell [class*="text-teal"] {
+  color: #5f6f86;
+}
+
+.storybook-shell [class*="border-emerald"],
+.storybook-shell [class*="border-green"],
+.storybook-shell [class*="border-teal"] {
+  border-color: #cbd2dc;
+}
+
+.storybook-shell [class*="hover:bg-emerald"]:hover,
+.storybook-shell [class*="hover:bg-green"]:hover,
+.storybook-shell [class*="hover:bg-teal"]:hover {
+  background-color: #e7ebf0;
+}
+
+.storybook-shell [class*="hover:text-emerald"]:hover,
+.storybook-shell [class*="hover:text-green"]:hover,
+.storybook-shell [class*="hover:text-teal"]:hover {
+  color: #48576d;
+}
+
+.storybook-shell button,
+.storybook-shell a,
+.storybook-shell input,
+.storybook-shell textarea,
+.storybook-shell select {
+  letter-spacing: 0;
+}
+
+.line-drawing {
+  color: #242424;
+  filter: none;
 }

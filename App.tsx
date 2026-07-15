@@ -14,8 +14,8 @@ const RiskCheckPage = lazy(() => import('./pages/RiskCheckPage'));
 const PageFallback: React.FC = () => (
   <div className="min-h-[60vh] flex items-center justify-center px-4">
     <div className="text-center">
-      <div className="w-10 h-10 mx-auto mb-4 border-4 border-violet-200 border-t-violet-600 rounded-full animate-spin"></div>
-      <p className="text-sm text-slate-500">Loading Beacon...</p>
+      <div className="mx-auto mb-4 h-10 w-10 animate-spin rounded-full border-2 border-[#e6dfcd] border-t-[#587252]"></div>
+      <p className="text-sm text-[#687164]">Loading Beacon...</p>
     </div>
   </div>
 );
@@ -32,7 +32,7 @@ const AppContent: React.FC = () => {
   }
 
   return (
-    <div className="min-h-screen bg-slate-50 font-sans text-slate-900 selection:bg-violet-200 selection:text-violet-900">
+    <div className="storybook-shell min-h-screen font-sans text-[#242424] selection:bg-[#dfe3ea] selection:text-[#242424]">
       <Navbar onEnableDisguise={() => setIsDisguised(true)} />
       <main>
         <Suspense fallback={<PageFallback />}>
@@ -48,8 +48,8 @@ const AppContent: React.FC = () => {
       </main>
       <QuickExit />
       
-      <footer className="bg-white border-t border-slate-200 py-8 mt-12">
-        <div className="max-w-6xl mx-auto px-4 text-center text-slate-500 text-sm">
+      <footer className="mt-12 border-t border-[#d9d9cf] bg-[#fbfbf7]/88 py-8">
+        <div className="mx-auto max-w-6xl px-4 text-center text-sm text-[#62675f]">
           <p className="mb-2">Beacon is an AI-powered support tool. It is not a replacement for professional legal counsel or emergency services.</p>
           <p>&copy; {new Date().getFullYear()} Beacon. Built for safety and support.</p>
         </div>

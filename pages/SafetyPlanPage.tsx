@@ -27,47 +27,46 @@ type Option = {
 };
 
 const URGENCY_OPTIONS: Option[] = [
-  { id: 'tonight', label: 'Stay safer tonight', helper: '今晚怎么更安全 / what to do if things get worse tonight' },
-  { id: 'leave_soon', label: 'Leave soon', helper: '准备离开 / planning an exit in the near future' },
-  { id: 'children', label: 'Children involved', helper: '孩子在场 / children may need extra planning' },
-  { id: 'monitoring', label: 'Phone or tech monitoring', helper: '手机被查 / device, location, or message safety' },
-  { id: 'friend', label: 'Helping someone else', helper: '帮助别人 / supporting a friend or family member' },
+  { id: 'tonight', label: 'Stay safer tonight', helper: '??????? / what to do if things get worse tonight' },
+  { id: 'leave_soon', label: 'Leave soon', helper: '???? / planning an exit in the near future' },
+  { id: 'children', label: 'Children involved', helper: '???? / children may need extra planning' },
+  { id: 'monitoring', label: 'Phone or tech monitoring', helper: '???????? / device, location, or message safety' },
+  { id: 'friend', label: 'Helping someone else', helper: '???? / supporting a friend or family member' },
 ];
 
 const SITUATION_OPTIONS: Option[] = [
-  { id: 'violence', label: 'Physical violence', helper: '打人、推人、扇耳光 / hitting, pushing, slapping' },
-  { id: 'threats', label: 'Threats or intimidation', helper: '威胁、恐吓 / threats, fear, coercion' },
-  { id: 'monitoring', label: 'Phone or location monitoring', helper: '查手机、定位、跟踪 / checking phone or tracking' },
-  { id: 'money', label: 'Money or document control', helper: '控制钱、证件、银行卡 / financial or document control' },
-  { id: 'children_saw', label: 'Children saw or heard it', helper: '孩子看到或听到 / children witnessed conflict or abuse' },
-  { id: 'nowhere_safe', label: 'No safe place nearby', helper: '附近没有安全去处 / nowhere obvious to go' },
+  { id: 'violence', label: 'Physical violence', helper: '????????? / hitting, pushing, slapping' },
+  { id: 'threats', label: 'Threats or intimidation', helper: '????? / threats, fear, coercion' },
+  { id: 'monitoring', label: 'Phone or location monitoring', helper: '????????? / checking phone or tracking' },
+  { id: 'money', label: 'Money or document control', helper: '?????????? / financial or document control' },
+  { id: 'children_saw', label: 'Children saw or heard it', helper: '??????? / children witnessed conflict or abuse' },
+  { id: 'nowhere_safe', label: 'No safe place nearby', helper: '???????? / nowhere obvious to go' },
 ];
 
 const ACCESS_OPTIONS: Option[] = [
-  { id: 'phone', label: 'A charged phone', helper: '手机可用 / you can call or message someone' },
-  { id: 'transport', label: 'Transport', helper: '车、公交、朋友接送 / car, taxi, bus, or trusted ride' },
-  { id: 'spare_key', label: 'Spare keys', helper: '备用钥匙 / backup key for leaving or returning' },
-  { id: 'trusted_person', label: 'Trusted person', helper: '可信的人 / friend, aunt, teacher, neighbour' },
-  { id: 'documents', label: 'Important documents', helper: '证件、银行卡、药物 / ID, bank cards, medicine' },
-  { id: 'safe_device', label: 'Safer device', helper: '比较安全的设备 / another phone or computer' },
+  { id: 'phone', label: 'A charged phone', helper: '???? / you can call or message someone' },
+  { id: 'transport', label: 'Transport', helper: '????????? / car, taxi, bus, or trusted ride' },
+  { id: 'spare_key', label: 'Spare keys', helper: '???? / backup key for leaving or returning' },
+  { id: 'trusted_person', label: 'Trusted person', helper: '???? / friend, aunt, teacher, neighbour' },
+  { id: 'documents', label: 'Important documents', helper: '????????? / ID, bank cards, medicine' },
+  { id: 'safe_device', label: 'Safer device', helper: '??????? / another phone or computer' },
 ];
 
 const BARRIER_OPTIONS: Option[] = [
-  { id: 'children', label: 'Children make leaving harder', helper: '孩子相关安排 / childcare or safety complications' },
-  { id: 'money', label: 'No money access', helper: '没有钱 / limited financial freedom' },
-  { id: 'transport', label: 'No easy transport', helper: '交通困难 / difficult to get away quickly' },
-  { id: 'monitoring', label: 'Phone is monitored', helper: '手机被监控 / calls, texts, or location may be checked' },
-  { id: 'isolation', label: 'No trusted person nearby', helper: '孤立无援 / no local support' },
-  { id: 'fear', label: 'Too scared to act fast', helper: '很害怕 / fear makes action harder' },
+  { id: 'children', label: 'Children make leaving harder', helper: '?????? / childcare or safety complications' },
+  { id: 'money', label: 'No money access', helper: '??? / limited financial freedom' },
+  { id: 'transport', label: 'No easy transport', helper: '???? / difficult to get away quickly' },
+  { id: 'monitoring', label: 'Phone is monitored', helper: '????? / calls, texts, or location may be checked' },
+  { id: 'isolation', label: 'No trusted person nearby', helper: '???? / no local support' },
+  { id: 'fear', label: 'Too scared to act fast', helper: '??? / fear makes action harder' },
 ];
 
 const NOTE_SUGGESTIONS = [
-  'He checked my phone today. / 他今天查我手机了。',
-  'Children saw the argument. / 孩子看到了争吵。',
-  "I hid a spare key. / 我藏了一把备用钥匙。",
-  "A trusted friend knows. / 一个可信的朋友知道这件事。",
+  'He checked my phone today. / ?????????',
+  'Children saw the argument. / ????????',
+  'I hid a spare key. / ??????????',
+  'A trusted friend knows. / ?????????????',
 ];
-
 const STEP_LABELS = ['Urgency', 'Situation', 'Access', 'Details'];
 
 const toggleValue = (values: string[], next: string) =>
@@ -83,8 +82,8 @@ const OptionChip: React.FC<{
     onClick={onClick}
     className={`rounded-[1.25rem] border px-4 py-3 text-left transition ${
       selected
-        ? 'border-violet-300 bg-violet-50 text-violet-900'
-        : 'border-slate-200 bg-slate-50 text-slate-800 hover:border-violet-200 hover:bg-violet-50'
+        ? 'border-beacon-100 bg-beacon-50 text-beacon-900'
+        : 'border-slate-200 bg-slate-50 text-slate-800 hover:border-beacon-100 hover:bg-beacon-50'
     }`}
   >
     <div className="text-sm font-semibold">{option.label}</div>
@@ -211,23 +210,23 @@ const SafetyPlanPage: React.FC = () => {
       <section className="mx-auto max-w-5xl rounded-[2rem] border border-white/70 bg-white/85 px-6 py-8 shadow-[0_20px_70px_rgba(15,23,42,0.08)] backdrop-blur-xl sm:px-8">
         <div className="grid gap-6 lg:grid-cols-[1.05fr_0.95fr]">
           <div>
-            <div className="inline-flex items-center gap-2 rounded-full border border-violet-200 bg-violet-50 px-3 py-1.5 text-sm font-medium text-violet-700">
+            <div className="inline-flex items-center gap-2 rounded-full border border-beacon-100 bg-beacon-50 px-3 py-1.5 text-sm font-medium text-beacon-600">
               <Shield size={15} />
               Guided Safety Planner
             </div>
             <h1 className="mt-5 text-4xl font-black tracking-tight text-slate-950 sm:text-5xl">
               Build a safer next step
-              <span className="block text-violet-600">without knowing what to write first.</span>
+              <span className="block text-beacon-500">without knowing what to write first.</span>
             </h1>
             <p className="mt-5 max-w-2xl text-lg leading-8 text-slate-600">
               This planner guides you step by step. You can tap options instead of typing everything yourself.
-              <span className="block mt-2 text-base">这个页面是引导式的，不需要你一开始就知道该写什么。</span>
+              <span className="block mt-2 text-base">?????????,???????????????</span>
             </p>
 
             <div className="mt-6 grid gap-3 sm:grid-cols-2">
               <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
                 <div className="flex items-center gap-2 text-sm font-semibold text-slate-900">
-                  <Sparkles size={16} className="text-violet-600" />
+                  <Sparkles size={16} className="text-beacon-500" />
                   What this helps with
                 </div>
                 <p className="mt-2 text-sm leading-6 text-slate-600">
@@ -271,7 +270,7 @@ const SafetyPlanPage: React.FC = () => {
 
       <section className="mx-auto mt-10 grid max-w-5xl gap-6 lg:grid-cols-[0.98fr_1.02fr]">
         <div className="rounded-[1.75rem] border border-slate-200 bg-white p-6 shadow-sm">
-          <div className="flex items-center gap-2 text-sm font-medium text-violet-700">
+          <div className="flex items-center gap-2 text-sm font-medium text-beacon-600">
             <ClipboardList size={16} />
             Guided planner
           </div>
@@ -280,7 +279,7 @@ const SafetyPlanPage: React.FC = () => {
               <div
                 key={label}
                 className={`rounded-full px-3 py-1.5 text-xs font-semibold ${
-                  index === step ? 'bg-violet-600 text-white' : 'border border-slate-200 bg-slate-50 text-slate-600'
+                  index === step ? 'bg-beacon-500 text-white' : 'border border-slate-200 bg-slate-50 text-slate-600'
                 }`}
               >
                 {index + 1}. {label}
@@ -368,7 +367,7 @@ const SafetyPlanPage: React.FC = () => {
               <div>
                 <label className="mb-2 block text-sm font-medium text-slate-700">Current living situation</label>
                 <select
-                  className="w-full rounded-2xl border border-slate-300 bg-slate-50 p-3 focus:border-violet-300 focus:bg-white focus:outline-none focus:ring-4 focus:ring-violet-100"
+                  className="w-full rounded-2xl border border-slate-300 bg-slate-50 p-3 focus:border-beacon-100 focus:bg-white focus:outline-none focus:ring-4 focus:ring-beacon-100"
                   value={details.livingSituation}
                   onChange={(e) => handleDetailChange('livingSituation', e.target.value)}
                 >
@@ -383,8 +382,8 @@ const SafetyPlanPage: React.FC = () => {
                 <label className="mb-2 block text-sm font-medium text-slate-700">Children details</label>
                 <input
                   type="text"
-                  className="w-full rounded-2xl border border-slate-300 bg-slate-50 p-3 focus:border-violet-300 focus:bg-white focus:outline-none focus:ring-4 focus:ring-violet-100"
-                  placeholder="For example: one child, age 8 / 例如：一个孩子，8岁"
+                  className="w-full rounded-2xl border border-slate-300 bg-slate-50 p-3 focus:border-beacon-100 focus:bg-white focus:outline-none focus:ring-4 focus:ring-beacon-100"
+                  placeholder="For example: one child, age 8 / ??:????,8?"
                   value={details.children}
                   onChange={(e) => handleDetailChange('children', e.target.value)}
                 />
@@ -394,8 +393,8 @@ const SafetyPlanPage: React.FC = () => {
                 <label className="mb-2 block text-sm font-medium text-slate-700">Transport details</label>
                 <input
                   type="text"
-                  className="w-full rounded-2xl border border-slate-300 bg-slate-50 p-3 focus:border-violet-300 focus:bg-white focus:outline-none focus:ring-4 focus:ring-violet-100"
-                  placeholder="For example: bus nearby, cousin can drive / 例如：附近有公交，表姐可以开车"
+                  className="w-full rounded-2xl border border-slate-300 bg-slate-50 p-3 focus:border-beacon-100 focus:bg-white focus:outline-none focus:ring-4 focus:ring-beacon-100"
+                  placeholder="For example: bus nearby, cousin can drive / ??:?????,??????"
                   value={details.transport}
                   onChange={(e) => handleDetailChange('transport', e.target.value)}
                 />
@@ -404,8 +403,8 @@ const SafetyPlanPage: React.FC = () => {
               <div>
                 <label className="mb-2 block text-sm font-medium text-slate-700">Trusted people or support</label>
                 <textarea
-                  className="w-full rounded-2xl border border-slate-300 bg-slate-50 p-3 focus:border-violet-300 focus:bg-white focus:outline-none focus:ring-4 focus:ring-violet-100"
-                  placeholder="For example: aunt nearby, teacher, one close friend / 例如：姨妈在附近，老师，一个可信的朋友"
+                  className="w-full rounded-2xl border border-slate-300 bg-slate-50 p-3 focus:border-beacon-100 focus:bg-white focus:outline-none focus:ring-4 focus:ring-beacon-100"
+                  placeholder="For example: aunt nearby, teacher, one close friend / ??:?????,??,???????"
                   rows={4}
                   value={details.support}
                   onChange={(e) => handleDetailChange('support', e.target.value)}
@@ -415,7 +414,7 @@ const SafetyPlanPage: React.FC = () => {
               <button
                 onClick={handleGenerate}
                 disabled={loading || !selectedUrgency}
-                className="flex w-full items-center justify-center rounded-2xl bg-violet-600 px-5 py-3 text-sm font-bold text-white shadow-[0_12px_30px_rgba(124,58,237,0.22)] transition hover:bg-violet-700 disabled:bg-slate-300"
+                className="flex w-full items-center justify-center rounded-2xl bg-beacon-500 px-5 py-3 text-sm font-bold text-white shadow-[0_12px_30px_rgba(13,107,51,0.22)] transition hover:bg-beacon-600 disabled:bg-slate-300"
               >
                 {loading ? <div className="h-6 w-6 animate-spin rounded-full border-2 border-white border-t-transparent"></div> : 'Build my guided plan'}
               </button>
@@ -436,7 +435,7 @@ const SafetyPlanPage: React.FC = () => {
                 type="button"
                 disabled={!canMoveForward}
                 onClick={() => setStep((prev) => Math.min(STEP_LABELS.length - 1, prev + 1))}
-                className="rounded-full bg-violet-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-violet-700 disabled:bg-slate-300"
+                className="rounded-full bg-beacon-500 px-4 py-2 text-sm font-semibold text-white transition hover:bg-beacon-600 disabled:bg-slate-300"
               >
                 Continue
               </button>
@@ -461,7 +460,7 @@ const SafetyPlanPage: React.FC = () => {
 
           <div className="rounded-[1.75rem] border border-slate-200 bg-white p-6 shadow-sm">
             <div className="flex items-center gap-2 text-sm font-medium text-slate-600">
-              <LockKeyhole size={16} className="text-violet-600" />
+              <LockKeyhole size={16} className="text-beacon-500" />
               Private notes
             </div>
             <h3 className="mt-3 text-xl font-bold text-slate-900">Quietly remember things over time</h3>
@@ -475,7 +474,7 @@ const SafetyPlanPage: React.FC = () => {
                   key={suggestion}
                   type="button"
                   onClick={() => handleAddNote(suggestion)}
-                  className="rounded-full border border-slate-200 bg-slate-50 px-3 py-2 text-xs text-slate-700 transition hover:border-violet-200 hover:bg-violet-50 hover:text-violet-700"
+                  className="rounded-full border border-slate-200 bg-slate-50 px-3 py-2 text-xs text-slate-700 transition hover:border-beacon-100 hover:bg-beacon-50 hover:text-beacon-600"
                 >
                   {suggestion}
                 </button>
@@ -487,8 +486,8 @@ const SafetyPlanPage: React.FC = () => {
                 value={newNote}
                 onChange={(e) => setNewNote(e.target.value)}
                 rows={3}
-                placeholder="For example: He checked my messages today. / 例如：他今天查了我的消息。"
-                className="w-full rounded-2xl border border-slate-300 bg-slate-50 p-3 text-sm focus:border-violet-300 focus:bg-white focus:outline-none focus:ring-4 focus:ring-violet-100"
+                placeholder="For example: He checked my messages today. / ??:??????????"
+                className="w-full rounded-2xl border border-slate-300 bg-slate-50 p-3 text-sm focus:border-beacon-100 focus:bg-white focus:outline-none focus:ring-4 focus:ring-beacon-100"
               />
             </div>
 
@@ -496,7 +495,7 @@ const SafetyPlanPage: React.FC = () => {
               <button
                 type="button"
                 onClick={() => handleAddNote(newNote)}
-                className="inline-flex items-center gap-2 rounded-full bg-violet-600 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-violet-700"
+                className="inline-flex items-center gap-2 rounded-full bg-beacon-500 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-beacon-600"
               >
                 <NotebookPen size={15} />
                 Save note
@@ -549,13 +548,13 @@ const SafetyPlanPage: React.FC = () => {
           <div className="rounded-[1.75rem] border border-slate-200 bg-white p-6 shadow-sm">
             <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
               <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.24em] text-violet-600">Your plan</p>
+                <p className="text-xs font-semibold uppercase tracking-[0.24em] text-beacon-500">Your plan</p>
                 <h2 className="mt-2 flex items-center gap-2 text-2xl font-bold text-slate-900">
                   <CheckCircle className="text-teal-500" />
                   Guided safety plan ready
                 </h2>
               </div>
-              <button onClick={() => setShowPlan(false)} className="text-sm font-medium text-slate-500 underline hover:text-violet-600">
+              <button onClick={() => setShowPlan(false)} className="text-sm font-medium text-slate-500 underline hover:text-beacon-500">
                 Hide plan
               </button>
             </div>
@@ -563,9 +562,9 @@ const SafetyPlanPage: React.FC = () => {
 
           <div className="rounded-[1.75rem] border border-slate-200 bg-white p-6 shadow-sm">
             {safeNotes.length > 0 && (
-              <div className="mb-6 rounded-2xl border border-violet-100 bg-violet-50 px-4 py-3">
-                <p className="text-xs font-semibold uppercase tracking-[0.22em] text-violet-700">Included in this plan</p>
-                <p className="mt-1 text-sm text-violet-900">
+              <div className="mb-6 rounded-2xl border border-beacon-100 bg-beacon-50 px-4 py-3">
+                <p className="text-xs font-semibold uppercase tracking-[0.22em] text-beacon-600">Included in this plan</p>
+                <p className="mt-1 text-sm text-beacon-900">
                   Beacon used {safeNotes.length} saved private note{safeNotes.length > 1 ? 's' : ''} to make this plan more specific.
                 </p>
               </div>
@@ -588,3 +587,4 @@ const SafetyPlanPage: React.FC = () => {
 };
 
 export default SafetyPlanPage;
+

@@ -118,7 +118,7 @@ const RiskCheckPage: React.FC = () => {
     <div className="px-4 py-8 pb-20">
       <section className="mx-auto max-w-5xl rounded-[2rem] border border-white/70 bg-white/85 px-6 py-8 shadow-[0_20px_70px_rgba(15,23,42,0.08)] backdrop-blur-xl sm:px-8">
         <div className="max-w-3xl">
-          <div className="inline-flex items-center gap-2 rounded-full border border-violet-200 bg-violet-50 px-3 py-1.5 text-sm font-medium text-violet-700">
+          <div className="inline-flex items-center gap-2 rounded-full border border-beacon-100 bg-beacon-50 px-3 py-1.5 text-sm font-medium text-beacon-600">
             <Sparkles size={15} />
             Gentle self-check
           </div>
@@ -145,7 +145,7 @@ const RiskCheckPage: React.FC = () => {
       <section className="mx-auto mt-8 max-w-5xl">
         <div className="mb-4 flex items-center justify-between">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-violet-600">Progress</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-beacon-500">Progress</p>
             <h2 className="mt-2 text-2xl font-bold text-slate-900">
               {answeredCount} of {QUESTIONS.length} answered
             </h2>
@@ -163,7 +163,7 @@ const RiskCheckPage: React.FC = () => {
           {QUESTIONS.map((question, index) => (
             <div key={question.id} className="rounded-[1.5rem] border border-slate-200 bg-white p-5 shadow-sm">
               <div className="flex items-start gap-4">
-                <div className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-violet-100 text-sm font-bold text-violet-700">
+                <div className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-beacon-100 text-sm font-bold text-beacon-600">
                   {index + 1}
                 </div>
                 <div className="flex-1">
@@ -187,8 +187,8 @@ const RiskCheckPage: React.FC = () => {
                           onClick={() => handleAnswer(question.id, value)}
                           className={`rounded-2xl border px-4 py-3 text-left text-sm font-medium transition ${
                             selected
-                              ? 'border-violet-300 bg-violet-50 text-violet-800'
-                              : 'border-slate-200 bg-slate-50 text-slate-700 hover:border-violet-200 hover:bg-violet-50'
+                              ? 'border-beacon-100 bg-beacon-50 text-beacon-600'
+                              : 'border-slate-200 bg-slate-50 text-slate-700 hover:border-beacon-100 hover:bg-beacon-50'
                           }`}
                         >
                           {ANSWER_META[value].label}
@@ -264,21 +264,21 @@ const RiskCheckPage: React.FC = () => {
             <div className="mt-6 flex flex-wrap gap-3">
               <Link
                 to="/chat"
-                className="inline-flex items-center gap-2 rounded-full bg-violet-600 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-violet-700"
+                className="inline-flex items-center gap-2 rounded-full bg-beacon-500 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-beacon-600"
               >
                 Talk it through
                 <ArrowRight size={16} />
               </Link>
               <Link
                 to="/resources"
-                className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2.5 text-sm font-semibold text-slate-800 transition hover:border-violet-200 hover:bg-violet-50"
+                className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2.5 text-sm font-semibold text-slate-800 transition hover:border-beacon-100 hover:bg-beacon-50"
               >
                 Find support
                 <ArrowRight size={16} />
               </Link>
               <Link
                 to="/safety-plan"
-                className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2.5 text-sm font-semibold text-slate-800 transition hover:border-violet-200 hover:bg-violet-50"
+                className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2.5 text-sm font-semibold text-slate-800 transition hover:border-beacon-100 hover:bg-beacon-50"
               >
                 Build a safety plan
                 <ArrowRight size={16} />

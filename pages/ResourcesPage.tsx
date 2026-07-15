@@ -79,7 +79,7 @@ const RESOURCE_PATHS: ResourcePath[] = [
     query: 'women shelter refuge crisis accommodation domestic violence Australia',
     icon: <Home size={18} />,
     accent: 'Stay safe',
-    panelClassName: 'border-sky-200 bg-sky-50 hover:border-sky-300 hover:bg-sky-100/70',
+    panelClassName: 'border-blue-200 bg-blue-50 hover:border-blue-300 hover:bg-blue-100/70',
   },
   {
     title: 'Counselling and recovery',
@@ -95,7 +95,7 @@ const RESOURCE_PATHS: ResourcePath[] = [
     query: 'family violence migrant support aboriginal support youth services Australia',
     icon: <HeartHandshake size={18} />,
     accent: 'Community',
-    panelClassName: 'border-violet-200 bg-violet-50 hover:border-violet-300 hover:bg-violet-100/70',
+    panelClassName: 'border-beacon-100 bg-beacon-50 hover:border-beacon-100 hover:bg-beacon-100/70',
   },
 ];
 
@@ -188,21 +188,16 @@ const ResourcesPage: React.FC = () => {
   return (
     <div className="px-4 py-8 pb-20">
       <section className="relative overflow-hidden rounded-[2rem] border border-white/70 bg-white/80 px-6 py-8 shadow-[0_20px_70px_rgba(15,23,42,0.08)] backdrop-blur-xl sm:px-8">
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute left-0 top-0 h-48 w-48 rounded-full bg-violet-200/40 blur-3xl"></div>
-          <div className="absolute bottom-[-3rem] right-[-2rem] h-56 w-56 rounded-full bg-sky-200/35 blur-3xl"></div>
-        </div>
-
         <div className="relative mx-auto max-w-6xl">
           <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 rounded-full border border-violet-200 bg-white/85 px-3 py-1.5 text-sm font-medium text-violet-700 shadow-sm">
+            <div className="inline-flex items-center gap-2 rounded-full border border-beacon-100 bg-white/85 px-3 py-1.5 text-sm font-medium text-beacon-600 shadow-sm">
               <MapPin size={15} />
               Australia-focused support guidance
             </div>
 
             <h1 className="mt-5 text-4xl font-black tracking-tight text-slate-950 sm:text-5xl">
               Find the right support
-              <span className="block bg-gradient-to-r from-violet-600 via-fuchsia-500 to-sky-500 bg-clip-text text-transparent">
+              <span className="block text-beacon-500">
                 without sorting through everything alone.
               </span>
             </h1>
@@ -246,7 +241,7 @@ const ResourcesPage: React.FC = () => {
             </div>
 
             <div className="rounded-[1.75rem] border border-slate-200 bg-slate-950 p-5 text-slate-100 shadow-[0_18px_55px_rgba(2,6,23,0.18)]">
-              <div className="flex items-center gap-2 text-sm font-medium text-sky-300">
+              <div className="flex items-center gap-2 text-sm font-medium text-[#9ee6ad]">
                 <Sparkles size={16} />
                 Calm next steps
               </div>
@@ -277,7 +272,7 @@ const ResourcesPage: React.FC = () => {
 
       <section className="mx-auto mt-10 max-w-6xl">
         <div className="mb-6">
-          <p className="text-xs font-semibold uppercase tracking-[0.28em] text-violet-600">Support Paths</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.28em] text-beacon-500">Support Paths</p>
           <h2 className="mt-3 text-3xl font-bold text-slate-900">Choose the kind of help you need</h2>
           <p className="mt-3 max-w-2xl text-slate-600">
             These pathways are designed to reduce decision fatigue. Start with the category that feels closest to what you need right now.
@@ -310,7 +305,7 @@ const ResourcesPage: React.FC = () => {
 
       <section className="mx-auto mt-10 max-w-6xl rounded-[1.75rem] border border-slate-200 bg-white p-6 shadow-sm">
         <div className="max-w-3xl">
-          <p className="text-xs font-semibold uppercase tracking-[0.24em] text-violet-600">What Happens Next</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.24em] text-beacon-500">What Happens Next</p>
           <h2 className="mt-3 text-3xl font-bold text-slate-900">A first contact usually does not mean losing control.</h2>
           <p className="mt-3 text-slate-600">
             Many people hesitate because they do not know what will happen after they call, ask a question, or contact a service.
@@ -321,7 +316,7 @@ const ResourcesPage: React.FC = () => {
         <div className="mt-6 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
           {NEXT_STEP_GUIDES.map((guide) => (
             <div key={guide.title} className="rounded-[1.5rem] border border-slate-200 bg-slate-50/80 p-5">
-              <div className="inline-flex rounded-2xl bg-white p-3 text-violet-600 shadow-sm">{guide.icon}</div>
+              <div className="inline-flex rounded-2xl bg-white p-3 text-beacon-500 shadow-sm">{guide.icon}</div>
               <h3 className="mt-4 text-lg font-bold text-slate-900">{guide.title}</h3>
               <p className="mt-2 text-sm leading-6 text-slate-600">{guide.description}</p>
             </div>
@@ -331,7 +326,7 @@ const ResourcesPage: React.FC = () => {
 
       <section className="mx-auto mt-10 grid max-w-6xl gap-6 lg:grid-cols-[0.9fr_1.1fr]">
         <div className="rounded-[1.75rem] border border-slate-200 bg-white p-6 shadow-sm">
-          <div className="flex items-center gap-2 text-sm font-medium text-violet-700">
+          <div className="flex items-center gap-2 text-sm font-medium text-beacon-600">
             <Search size={16} />
             Search by need
           </div>
@@ -347,7 +342,7 @@ const ResourcesPage: React.FC = () => {
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
                 placeholder="For example: legal help after family violence, crisis accommodation, counselling near me"
-                className="w-full rounded-2xl border border-slate-300 bg-slate-50 py-3.5 pl-11 pr-4 text-sm text-slate-800 outline-none transition focus:border-violet-300 focus:bg-white focus:ring-4 focus:ring-violet-100"
+                className="w-full rounded-2xl border border-slate-300 bg-slate-50 py-3.5 pl-11 pr-4 text-sm text-slate-800 outline-none transition focus:border-beacon-100 focus:bg-white focus:ring-4 focus:ring-beacon-100"
               />
               <Search className="absolute left-4 top-3.5 text-slate-400" size={18} />
             </div>
@@ -355,7 +350,7 @@ const ResourcesPage: React.FC = () => {
             <button
               type="submit"
               disabled={loading}
-              className="inline-flex items-center justify-center gap-2 rounded-2xl bg-violet-600 px-5 py-3 text-sm font-semibold text-white shadow-[0_12px_30px_rgba(124,58,237,0.22)] transition hover:bg-violet-700 disabled:cursor-not-allowed disabled:bg-violet-400"
+              className="inline-flex items-center justify-center gap-2 rounded-2xl bg-beacon-500 px-5 py-3 text-sm font-semibold text-white shadow-[0_12px_30px_rgba(13,107,51,0.22)] transition hover:bg-beacon-600 disabled:cursor-not-allowed disabled:bg-beacon-500"
             >
               {loading ? 'Searching...' : 'Get support suggestions'}
             </button>
@@ -367,21 +362,21 @@ const ResourcesPage: React.FC = () => {
               <button
                 type="button"
                 onClick={() => runSearch('support for a friend experiencing domestic violence in Australia')}
-                className="rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-left text-sm text-slate-700 transition hover:border-violet-200 hover:bg-violet-50 hover:text-violet-700"
+                className="rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-left text-sm text-slate-700 transition hover:border-beacon-100 hover:bg-beacon-50 hover:text-beacon-600"
               >
                 Help for a friend
               </button>
               <button
                 type="button"
                 onClick={() => runSearch('domestic violence support for migrants and international students in Australia')}
-                className="rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-left text-sm text-slate-700 transition hover:border-violet-200 hover:bg-violet-50 hover:text-violet-700"
+                className="rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-left text-sm text-slate-700 transition hover:border-beacon-100 hover:bg-beacon-50 hover:text-beacon-600"
               >
                 Migrant support
               </button>
               <button
                 type="button"
                 onClick={() => runSearch('technology safety stalking surveillance domestic violence Australia')}
-                className="rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-left text-sm text-slate-700 transition hover:border-violet-200 hover:bg-violet-50 hover:text-violet-700 sm:col-span-2"
+                className="rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-left text-sm text-slate-700 transition hover:border-beacon-100 hover:bg-beacon-50 hover:text-beacon-600 sm:col-span-2"
               >
                 Digital safety
               </button>
@@ -410,7 +405,7 @@ const ResourcesPage: React.FC = () => {
           <div className="mt-6 grid gap-4">
             <div className="rounded-2xl border border-slate-200 bg-slate-50/90 p-4">
               <div className="flex items-start gap-3">
-                <div className="mt-0.5 rounded-full bg-violet-100 p-2 text-violet-700">
+                <div className="mt-0.5 rounded-full bg-beacon-100 p-2 text-beacon-600">
                   <CheckCircle2 size={16} />
                 </div>
                 <div>
@@ -424,7 +419,7 @@ const ResourcesPage: React.FC = () => {
 
             <div className="rounded-2xl border border-slate-200 bg-slate-50/90 p-4">
               <div className="flex items-start gap-3">
-                <div className="mt-0.5 rounded-full bg-violet-100 p-2 text-violet-700">
+                <div className="mt-0.5 rounded-full bg-beacon-100 p-2 text-beacon-600">
                   <CheckCircle2 size={16} />
                 </div>
                 <div>
@@ -438,7 +433,7 @@ const ResourcesPage: React.FC = () => {
 
             <div className="rounded-2xl border border-slate-200 bg-slate-50/90 p-4">
               <div className="flex items-start gap-3">
-                <div className="mt-0.5 rounded-full bg-violet-100 p-2 text-violet-700">
+                <div className="mt-0.5 rounded-full bg-beacon-100 p-2 text-beacon-600">
                   <CheckCircle2 size={16} />
                 </div>
                 <div>
@@ -469,7 +464,7 @@ const ResourcesPage: React.FC = () => {
                       href={item.href}
                       target={item.href.startsWith('http') ? '_blank' : undefined}
                       rel={item.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                      className="inline-flex items-center gap-2 self-start rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-800 transition hover:border-violet-200 hover:bg-violet-50 hover:text-violet-700"
+                      className="inline-flex items-center gap-2 self-start rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-800 transition hover:border-beacon-100 hover:bg-beacon-50 hover:text-beacon-600"
                     >
                       {item.href.startsWith('http') ? <ExternalLink size={15} /> : <Phone size={15} />}
                       {item.contact}
@@ -503,7 +498,7 @@ const ResourcesPage: React.FC = () => {
               <div className="rounded-[1.75rem] border border-slate-200 bg-white p-6 shadow-sm">
                 <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
                   <div>
-                    <p className="text-xs font-semibold uppercase tracking-[0.24em] text-violet-600">Results</p>
+                    <p className="text-xs font-semibold uppercase tracking-[0.24em] text-beacon-500">Results</p>
                     <h2 className="mt-2 text-2xl font-bold text-slate-900">
                       {lastSearchLabel ? `Support guidance for ${lastSearchLabel}` : 'Support guidance'}
                     </h2>
@@ -534,7 +529,7 @@ const ResourcesPage: React.FC = () => {
                       <div key={`${source.title}-${idx}`} className="rounded-[1.5rem] border border-slate-200 bg-slate-50/80 p-5">
                         <div className="flex items-start justify-between gap-3">
                           <div>
-                            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-violet-600">
+                            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-beacon-500">
                               {source.type ?? 'support'}
                             </p>
                             <h4 className="mt-2 text-lg font-bold text-slate-900">{source.title}</h4>
@@ -549,9 +544,9 @@ const ResourcesPage: React.FC = () => {
                         )}
 
                         {source.whyThisHelps && (
-                          <div className="mt-4 rounded-2xl border border-violet-100 bg-violet-50 px-4 py-3">
-                            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-violet-700">Why this helps</p>
-                            <p className="mt-1 text-sm leading-6 text-violet-900">{source.whyThisHelps}</p>
+                          <div className="mt-4 rounded-2xl border border-beacon-100 bg-beacon-50 px-4 py-3">
+                            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-beacon-600">Why this helps</p>
+                            <p className="mt-1 text-sm leading-6 text-beacon-900">{source.whyThisHelps}</p>
                           </div>
                         )}
 
@@ -559,7 +554,7 @@ const ResourcesPage: React.FC = () => {
                           {source.phone && (
                             <a
                               href={`tel:${source.phone}`}
-                              className="inline-flex items-center gap-2 rounded-full bg-violet-600 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-violet-700"
+                              className="inline-flex items-center gap-2 rounded-full bg-beacon-500 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-beacon-600"
                             >
                               <Phone size={15} />
                               Call
@@ -569,7 +564,7 @@ const ResourcesPage: React.FC = () => {
                             href={source.uri}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2.5 text-sm font-semibold text-slate-800 transition hover:border-violet-200 hover:bg-violet-50"
+                            className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2.5 text-sm font-semibold text-slate-800 transition hover:border-beacon-100 hover:bg-beacon-50"
                           >
                             <ExternalLink size={15} />
                             Visit website
@@ -601,7 +596,7 @@ const ResourcesPage: React.FC = () => {
                           href={source.uri}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="flex items-center justify-between rounded-2xl border border-slate-200 p-3.5 transition hover:border-violet-300 hover:bg-violet-50"
+                          className="flex items-center justify-between rounded-2xl border border-slate-200 p-3.5 transition hover:border-beacon-100 hover:bg-beacon-50"
                         >
                           <span className="truncate pr-3 text-sm font-medium text-slate-700">{source.title}</span>
                           <ExternalLink size={16} className="text-slate-400" />

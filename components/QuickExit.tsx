@@ -10,11 +10,11 @@ const QuickExit: React.FC = () => {
   return (
     <button
       onClick={handleExit}
-      className="fixed bottom-4 right-4 z-50 bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-full shadow-lg flex items-center gap-2 transition-all transform hover:scale-105"
+      className="fixed right-4 top-20 z-50 flex items-center gap-2 rounded-full border border-[#8c3f2e] bg-[#fbfbf7]/94 px-4 py-3 font-semibold text-[#8c3f2e] backdrop-blur-xl transition-all hover:bg-[#f2e5df] sm:px-5"
       aria-label="Quick Exit to Google"
     >
-      <LogOut size={24} />
-      <span className="uppercase tracking-wider text-sm">Quick Exit</span>
+      <LogOut size={22} />
+      <span className="text-xs uppercase tracking-[0.16em] sm:text-sm">Quick Exit</span>
     </button>
   );
 };

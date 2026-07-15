@@ -184,7 +184,7 @@ const ChatPage: React.FC = () => {
               setActiveTab('text');
             }}
             className={`border-b-2 py-4 text-sm font-medium transition-colors ${
-              activeTab === 'text' ? 'border-violet-600 text-violet-700' : 'border-transparent text-slate-500 hover:text-slate-700'
+              activeTab === 'text' ? 'border-beacon-500 text-beacon-600' : 'border-transparent text-slate-500 hover:text-slate-700'
             }`}
           >
             Text Support
@@ -192,7 +192,7 @@ const ChatPage: React.FC = () => {
           <button
             onClick={() => setActiveTab('voice')}
             className={`flex items-center gap-2 border-b-2 py-4 text-sm font-medium transition-colors ${
-              activeTab === 'voice' ? 'border-violet-600 text-violet-700' : 'border-transparent text-slate-500 hover:text-slate-700'
+              activeTab === 'voice' ? 'border-beacon-500 text-beacon-600' : 'border-transparent text-slate-500 hover:text-slate-700'
             }`}
           >
             Safe Call <span className="rounded-full bg-red-100 px-1.5 py-0.5 text-[10px] text-red-700">SOS</span>
@@ -213,17 +213,17 @@ const ChatPage: React.FC = () => {
         <>
           <div className="flex-1 overflow-y-auto">
             {showIntro && (
-              <div className="border-b border-slate-200 bg-gradient-to-br from-violet-50 via-white to-sky-50 px-4 py-8">
+              <div className="border-b border-slate-200 bg-gradient-to-br from-beacon-50 via-white to-sky-50 px-4 py-8">
                 <div className="mx-auto max-w-5xl">
                   <div className="grid gap-6 lg:grid-cols-[1.05fr_0.95fr]">
                     <div>
-                      <div className="inline-flex items-center gap-2 rounded-full border border-violet-200 bg-white/90 px-3 py-1.5 text-sm font-medium text-violet-700 shadow-sm">
+                      <div className="inline-flex items-center gap-2 rounded-full border border-beacon-100 bg-white/90 px-3 py-1.5 text-sm font-medium text-beacon-600 shadow-sm">
                         <Sparkles size={15} />
                         Calm, private first steps
                       </div>
                       <h1 className="mt-5 text-3xl font-black tracking-tight text-slate-950 sm:text-4xl">
                         You do not have to tell the whole story
-                        <span className="block text-violet-600">to get support.</span>
+                        <span className="block text-beacon-500">to get support.</span>
                       </h1>
                       <p className="mt-4 max-w-2xl text-base leading-7 text-slate-600">
                         Beacon can help you think through options, name what is happening, and decide on a safer next step. This is support
@@ -233,7 +233,7 @@ const ChatPage: React.FC = () => {
                       <div className="mt-6 grid gap-3 sm:grid-cols-2">
                         <div className="rounded-2xl border border-white/70 bg-white/90 p-4 shadow-sm">
                           <div className="flex items-center gap-2 text-sm font-semibold text-slate-900">
-                            <Shield size={16} className="text-violet-600" />
+                            <Shield size={16} className="text-beacon-500" />
                             Good for first steps
                           </div>
                           <p className="mt-2 text-sm leading-6 text-slate-600">
@@ -253,7 +253,7 @@ const ChatPage: React.FC = () => {
                     </div>
 
                     <div className="rounded-[1.75rem] border border-slate-200 bg-white/90 p-5 shadow-sm">
-                      <div className="flex items-center gap-2 text-sm font-medium text-violet-700">
+                      <div className="flex items-center gap-2 text-sm font-medium text-beacon-600">
                         <ChevronRight size={15} />
                         Suggested ways to start
                       </div>
@@ -263,7 +263,7 @@ const ChatPage: React.FC = () => {
                             key={prompt}
                             type="button"
                             onClick={() => handleSuggestedPrompt(prompt)}
-                            className="rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-left text-sm text-slate-700 transition hover:border-violet-200 hover:bg-violet-50 hover:text-violet-700"
+                            className="rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-left text-sm text-slate-700 transition hover:border-beacon-100 hover:bg-beacon-50 hover:text-beacon-600"
                           >
                             {prompt}
                           </button>
@@ -331,7 +331,7 @@ const ChatPage: React.FC = () => {
                   <div className={`flex max-w-[88%] gap-3 md:max-w-[72%] ${msg.role === 'user' ? 'flex-row-reverse' : 'flex-row'}`}>
                     <div
                       className={`flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full ${
-                        msg.role === 'user' ? 'bg-violet-600' : 'bg-teal-600'
+                        msg.role === 'user' ? 'bg-beacon-500' : 'bg-teal-600'
                       }`}
                     >
                       {msg.role === 'user' ? <User size={16} className="text-white" /> : <Bot size={16} className="text-white" />}
@@ -339,7 +339,7 @@ const ChatPage: React.FC = () => {
                     <div
                       className={`rounded-2xl p-4 shadow-sm ${
                         msg.role === 'user'
-                          ? 'rounded-tr-none bg-violet-600 text-white'
+                          ? 'rounded-tr-none bg-beacon-500 text-white'
                           : msg.isError
                             ? 'rounded-tl-none border border-red-200 bg-red-50 text-red-800'
                             : 'rounded-tl-none border border-slate-100 bg-white text-slate-800'
@@ -444,7 +444,7 @@ const ChatPage: React.FC = () => {
                       key={prompt}
                       type="button"
                       onClick={() => handleSuggestedPrompt(prompt)}
-                      className="rounded-full border border-slate-200 bg-slate-50 px-3 py-2 text-xs text-slate-700 transition hover:border-violet-200 hover:bg-violet-50 hover:text-violet-700"
+                      className="rounded-full border border-slate-200 bg-slate-50 px-3 py-2 text-xs text-slate-700 transition hover:border-beacon-100 hover:bg-beacon-50 hover:text-beacon-600"
                     >
                       {prompt}
                     </button>
@@ -458,13 +458,13 @@ const ChatPage: React.FC = () => {
                   onChange={(e) => setInputText(e.target.value)}
                   onKeyDown={handleKeyPress}
                   placeholder="Type your message here..."
-                  className="max-h-32 flex-1 resize-none rounded-xl border border-slate-300 px-4 py-3 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-violet-500"
+                  className="max-h-32 flex-1 resize-none rounded-xl border border-slate-300 px-4 py-3 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-beacon-500"
                   rows={1}
                 />
                 <button
                   onClick={handleSend}
                   disabled={isLoading || !inputText.trim()}
-                  className="flex items-center justify-center rounded-xl bg-violet-600 px-4 text-white transition-colors hover:bg-violet-700 disabled:bg-slate-300"
+                  className="flex items-center justify-center rounded-xl bg-beacon-500 px-4 text-white transition-colors hover:bg-beacon-600 disabled:bg-slate-300"
                 >
                   <Send size={20} />
                 </button>
