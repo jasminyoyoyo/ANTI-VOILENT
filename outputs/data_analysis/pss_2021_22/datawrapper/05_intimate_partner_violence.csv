@@ -1,9 +1,9 @@
-﻿state_name,state_code,value_percent,display_value,rse_percent,indicator,indicator_zh,population,experience_window,survey_release,source,source_url
-New South Wales,NSW,21.0,21.0%,6.2,Intimate partner violence since age 15,自15岁以来经历亲密伴侣暴力,Women aged 18 years and over,Since age 15,ABS PSS 2021–22 (released 15 Mar 2023),"Australian Bureau of Statistics, Personal Safety Survey 2021–22, Table 9.3; RSE Table 9.4",https://www.abs.gov.au/statistics/people/crime-and-justice/personal-safety-australia/latest-release
-Victoria,VIC,22.6,22.6%,5.2,Intimate partner violence since age 15,自15岁以来经历亲密伴侣暴力,Women aged 18 years and over,Since age 15,ABS PSS 2021–22 (released 15 Mar 2023),"Australian Bureau of Statistics, Personal Safety Survey 2021–22, Table 9.3; RSE Table 9.4",https://www.abs.gov.au/statistics/people/crime-and-justice/personal-safety-australia/latest-release
-Queensland,QLD,26.4,26.4%,4.4,Intimate partner violence since age 15,自15岁以来经历亲密伴侣暴力,Women aged 18 years and over,Since age 15,ABS PSS 2021–22 (released 15 Mar 2023),"Australian Bureau of Statistics, Personal Safety Survey 2021–22, Table 9.3; RSE Table 9.4",https://www.abs.gov.au/statistics/people/crime-and-justice/personal-safety-australia/latest-release
-South Australia,SA,24.1,24.1%,5.6,Intimate partner violence since age 15,自15岁以来经历亲密伴侣暴力,Women aged 18 years and over,Since age 15,ABS PSS 2021–22 (released 15 Mar 2023),"Australian Bureau of Statistics, Personal Safety Survey 2021–22, Table 9.3; RSE Table 9.4",https://www.abs.gov.au/statistics/people/crime-and-justice/personal-safety-australia/latest-release
-Western Australia,WA,24.3,24.3%,5.6,Intimate partner violence since age 15,自15岁以来经历亲密伴侣暴力,Women aged 18 years and over,Since age 15,ABS PSS 2021–22 (released 15 Mar 2023),"Australian Bureau of Statistics, Personal Safety Survey 2021–22, Table 9.3; RSE Table 9.4",https://www.abs.gov.au/statistics/people/crime-and-justice/personal-safety-australia/latest-release
-Tasmania,TAS,28.1,28.1%,4.8,Intimate partner violence since age 15,自15岁以来经历亲密伴侣暴力,Women aged 18 years and over,Since age 15,ABS PSS 2021–22 (released 15 Mar 2023),"Australian Bureau of Statistics, Personal Safety Survey 2021–22, Table 9.3; RSE Table 9.4",https://www.abs.gov.au/statistics/people/crime-and-justice/personal-safety-australia/latest-release
-Northern Territory,NT,28.1,28.1%,8.0,Intimate partner violence since age 15,自15岁以来经历亲密伴侣暴力,Women aged 18 years and over,Since age 15,ABS PSS 2021–22 (released 15 Mar 2023),"Australian Bureau of Statistics, Personal Safety Survey 2021–22, Table 9.3; RSE Table 9.4",https://www.abs.gov.au/statistics/people/crime-and-justice/personal-safety-australia/latest-release
-Australian Capital Territory,ACT,23.0,23.0%,6.7,Intimate partner violence since age 15,自15岁以来经历亲密伴侣暴力,Women aged 18 years and over,Since age 15,ABS PSS 2021–22 (released 15 Mar 2023),"Australian Bureau of Statistics, Personal Safety Survey 2021–22, Table 9.3; RSE Table 9.4",https://www.abs.gov.au/statistics/people/crime-and-justice/personal-safety-australia/latest-release
+﻿state_name,state_code,value_percent,rse_percent
+New South Wales,NSW,21.0,6.2
+Victoria,VIC,22.6,5.2
+Queensland,QLD,26.4,4.4
+South Australia,SA,24.1,5.6
+Western Australia,WA,24.3,5.6
+Tasmania,TAS,28.1,4.8
+Northern Territory,NT,28.1,8.0
+Australian Capital Territory,ACT,23.0,6.7

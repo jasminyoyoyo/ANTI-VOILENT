@@ -1,9 +1,9 @@
-﻿state_name,state_code,value_percent,display_value,rse_percent,indicator,indicator_zh,population,experience_window,survey_release,source,source_url
-New South Wales,NSW,22.6,22.6%,6.0,Cohabiting partner emotional abuse since age 15,自15岁以来经历同居伴侣情感虐待,Women aged 18 years and over,Since age 15,ABS PSS 2021–22 (released 15 Mar 2023),"Australian Bureau of Statistics, Personal Safety Survey 2021–22, Table 9.3; RSE Table 9.4",https://www.abs.gov.au/statistics/people/crime-and-justice/personal-safety-australia/latest-release
-Victoria,VIC,22.3,22.3%,5.2,Cohabiting partner emotional abuse since age 15,自15岁以来经历同居伴侣情感虐待,Women aged 18 years and over,Since age 15,ABS PSS 2021–22 (released 15 Mar 2023),"Australian Bureau of Statistics, Personal Safety Survey 2021–22, Table 9.3; RSE Table 9.4",https://www.abs.gov.au/statistics/people/crime-and-justice/personal-safety-australia/latest-release
-Queensland,QLD,22.9,22.9%,4.6,Cohabiting partner emotional abuse since age 15,自15岁以来经历同居伴侣情感虐待,Women aged 18 years and over,Since age 15,ABS PSS 2021–22 (released 15 Mar 2023),"Australian Bureau of Statistics, Personal Safety Survey 2021–22, Table 9.3; RSE Table 9.4",https://www.abs.gov.au/statistics/people/crime-and-justice/personal-safety-australia/latest-release
-South Australia,SA,24.3,24.3%,5.6,Cohabiting partner emotional abuse since age 15,自15岁以来经历同居伴侣情感虐待,Women aged 18 years and over,Since age 15,ABS PSS 2021–22 (released 15 Mar 2023),"Australian Bureau of Statistics, Personal Safety Survey 2021–22, Table 9.3; RSE Table 9.4",https://www.abs.gov.au/statistics/people/crime-and-justice/personal-safety-australia/latest-release
-Western Australia,WA,23.7,23.7%,5.8,Cohabiting partner emotional abuse since age 15,自15岁以来经历同居伴侣情感虐待,Women aged 18 years and over,Since age 15,ABS PSS 2021–22 (released 15 Mar 2023),"Australian Bureau of Statistics, Personal Safety Survey 2021–22, Table 9.3; RSE Table 9.4",https://www.abs.gov.au/statistics/people/crime-and-justice/personal-safety-australia/latest-release
-Tasmania,TAS,28.3,28.3%,4.6,Cohabiting partner emotional abuse since age 15,自15岁以来经历同居伴侣情感虐待,Women aged 18 years and over,Since age 15,ABS PSS 2021–22 (released 15 Mar 2023),"Australian Bureau of Statistics, Personal Safety Survey 2021–22, Table 9.3; RSE Table 9.4",https://www.abs.gov.au/statistics/people/crime-and-justice/personal-safety-australia/latest-release
-Northern Territory,NT,26.3,26.3%,8.4,Cohabiting partner emotional abuse since age 15,自15岁以来经历同居伴侣情感虐待,Women aged 18 years and over,Since age 15,ABS PSS 2021–22 (released 15 Mar 2023),"Australian Bureau of Statistics, Personal Safety Survey 2021–22, Table 9.3; RSE Table 9.4",https://www.abs.gov.au/statistics/people/crime-and-justice/personal-safety-australia/latest-release
-Australian Capital Territory,ACT,21.3,21.3%,7.2,Cohabiting partner emotional abuse since age 15,自15岁以来经历同居伴侣情感虐待,Women aged 18 years and over,Since age 15,ABS PSS 2021–22 (released 15 Mar 2023),"Australian Bureau of Statistics, Personal Safety Survey 2021–22, Table 9.3; RSE Table 9.4",https://www.abs.gov.au/statistics/people/crime-and-justice/personal-safety-australia/latest-release
+﻿state_name,state_code,value_percent,rse_percent
+New South Wales,NSW,22.6,6.0
+Victoria,VIC,22.3,5.2
+Queensland,QLD,22.9,4.6
+South Australia,SA,24.3,5.6
+Western Australia,WA,23.7,5.8
+Tasmania,TAS,28.3,4.6
+Northern Territory,NT,26.3,8.4
+Australian Capital Territory,ACT,21.3,7.2

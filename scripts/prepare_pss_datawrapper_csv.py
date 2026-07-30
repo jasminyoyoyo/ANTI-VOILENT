@@ -64,15 +64,7 @@ OUTPUT_FIELDS = [
     "state_name",
     "state_code",
     "value_percent",
-    "display_value",
     "rse_percent",
-    "indicator",
-    "indicator_zh",
-    "population",
-    "experience_window",
-    "survey_release",
-    "source",
-    "source_url",
 ]
 
 
@@ -93,9 +85,7 @@ def main() -> None:
         raise ValueError(f"Expected 48 state-indicator rows, found {len(selected)}")
 
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
-    combined_rows: list[dict[str, str]] = []
-
-    for source_indicator, (slug, label_en, label_zh) in INDICATORS.items():
+    for source_indicator, (slug, _label_en, _label_zh) in INDICATORS.items():
         indicator_rows = []
         for row in selected:
             if row["indicator"] != source_indicator:
@@ -104,18 +94,9 @@ def main() -> None:
                 "state_name": row["jurisdiction"],
                 "state_code": STATE_CODES[row["jurisdiction"]],
                 "value_percent": row["value_percent"],
-                "display_value": f'{float(row["value_percent"]):.1f}%',
                 "rse_percent": row["rse_percent"],
-                "indicator": label_en,
-                "indicator_zh": label_zh,
-                "population": "Women aged 18 years and over",
-                "experience_window": "Since age 15",
-                "survey_release": "ABS PSS 2021–22 (released 15 Mar 2023)",
-                "source": "Australian Bureau of Statistics, Personal Safety Survey 2021–22, Table 9.3; RSE Table 9.4",
-                "source_url": row["official_source_url"],
             }
             indicator_rows.append(output_row)
-            combined_rows.append(output_row)
 
         if len(indicator_rows) != 8:
             raise ValueError(f"{source_indicator}: expected 8 jurisdictions")
@@ -126,13 +107,7 @@ def main() -> None:
             writer.writeheader()
             writer.writerows(indicator_rows)
 
-    combined_path = OUTPUT_DIR / "00_all_six_indicators.csv"
-    with combined_path.open("w", encoding="utf-8-sig", newline="") as output_file:
-        writer = csv.DictWriter(output_file, fieldnames=OUTPUT_FIELDS)
-        writer.writeheader()
-        writer.writerows(combined_rows)
-
-    print(f"Created 6 map CSV files and 1 combined CSV in {OUTPUT_DIR}")
+    print(f"Created 6 map CSV files in {OUTPUT_DIR}")
 
 
 if __name__ == "__main__":

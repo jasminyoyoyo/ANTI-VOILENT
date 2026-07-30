@@ -10,9 +10,9 @@ Generated: 30 July 2026
 
 ## Datawrapper files
 
-The `datawrapper/` folder contains six cleaned, one-indicator CSV files ready
-for Australian state/territory choropleths, plus one combined reference file.
-See `datawrapper/README.md` for the recommended fields.
+The `datawrapper/` folder contains six minimal, one-indicator CSV files ready
+for Australian state/territory choropleths. See `datawrapper/README.md` for the
+recommended fields.
 
 ## Statistical source
 
