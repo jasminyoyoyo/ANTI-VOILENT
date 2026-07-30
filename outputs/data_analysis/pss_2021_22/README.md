@@ -8,6 +8,12 @@ Generated: 30 July 2026
 - `figures/pss_total_violence_australia_choropleth.png` — state and territory choropleth of women's total violence experience since age 15.
 - `figures/pss_selected_experiences_australia_small_multiples.png` — six matching maps for total, physical, sexual, partner/family and intimate-partner violence, plus cohabiting-partner emotional abuse. Each panel has its own labelled colour range; compare indicators using the printed percentages rather than colour intensity.
 
+## Datawrapper files
+
+The `datawrapper/` folder contains six cleaned, one-indicator CSV files ready
+for Australian state/territory choropleths, plus one combined reference file.
+See `datawrapper/README.md` for the recommended fields.
+
 ## Statistical source
 
 Australian Bureau of Statistics, *Personal Safety, Australia, 2021–22*, released 15 March 2023.
