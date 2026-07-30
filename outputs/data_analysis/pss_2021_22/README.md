@@ -1,11 +1,12 @@
 # ABS PSS 2021–22 analysis figures
 
-Generated: 29 July 2026
+Generated: 30 July 2026
 
 ## Figures
 
 - `figures/pss_raw_prevalence_heatmap.png` — women aged 18+ reporting selected experiences since age 15, shown across eight states and territories.
 - `figures/pss_total_violence_australia_choropleth.png` — state and territory choropleth of women's total violence experience since age 15.
+- `figures/pss_selected_experiences_australia_small_multiples.png` — six matching maps for total, physical, sexual, partner/family and intimate-partner violence, plus cohabiting-partner emotional abuse. Each panel has its own labelled colour range; compare indicators using the printed percentages rather than colour intensity.
 
 ## Statistical source
 
@@ -21,7 +22,7 @@ Original workbook:
 
 ## Geographic source
 
-The choropleth uses generalised State and Territory boundaries from the ABS Australian Statistical Geography Standard (ASGS), Edition 3 (2021).
+The maps use generalised State and Territory boundaries from the ABS Australian Statistical Geography Standard (ASGS), Edition 3 (2021).
 
 - `sources/abs_states_2021.geojson`
 
