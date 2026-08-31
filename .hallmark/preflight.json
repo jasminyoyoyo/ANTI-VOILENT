@@ -1,0 +1,9 @@
+{
+  "date": "2026-08-31",
+  "framework": "Vite 6 + React 19 + Tailwind CSS 4",
+  "fontStack": "System sans: Hiragino Sans, Yu Gothic, SF Pro Display, Segoe UI",
+  "palette": "Warm paper, blue-grey accent, terracotta safety accent",
+  "motion": "motion-cut; no motion library detected",
+  "spacing": "Hallmark 4-point named scale introduced in tokens.css",
+  "preserved": ["brand palette", "system font stack", "routes", "existing safety features"]
+}
